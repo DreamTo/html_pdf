@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dynamic JS Test</title>
+<style>
+body { font-family: sans-serif; margin: 40px; }
+</style>
+</head>
+<body>
+<h1>动态内容测试</h1>
+<div id="data"></div>
+
+<script>
+document.getElementById('data').innerHTML = `
+  <table border="1" cellpadding="8">
+    <tr><th>时间</th><th>随机值</th></tr>
+    ${Array.from({length: 5}).map(() =>
+      `<tr><td>${new Date().toLocaleTimeString()}</td><td>${Math.random().toFixed(4)}</td></tr>`
+    ).join('')}
+  </table>`;
+</script>
+</body>
+</html>

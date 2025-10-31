@@ -1,0 +1,63 @@
+# HTML转PDF工具对比评估系统 - 依赖管理文件
+# 
+# 本项目支持多种依赖管理方式：
+# 1. 使用 pip: pip install -r requirements.txt
+# 2. 使用 uv (推荐): uv sync
+# 3. 使用 poetry: poetry install
+
+# ==================== 核心转换工具 ====================
+# WeasyPrint - 专业的HTML/CSS到PDF转换库
+weasyprint>=66.0
+
+# Playwright - 现代浏览器自动化工具，支持JavaScript渲染
+playwright>=1.55.0
+
+# ==================== 数据处理和验证 ====================
+# Pydantic - 数据验证和设置管理
+pydantic>=2.8.2
+
+# PyPDF2 - PDF文件分析和处理
+pypdf2>=3.0.1
+
+# ==================== 可选依赖 ====================
+# 以下依赖根据具体需求可选安装
+
+# Web框架支持（如果需要API服务）
+# fastapi>=0.112.0
+# uvicorn>=0.30.0
+
+# 高级PDF处理
+# pymupdf>=1.24.0        # 更强大的PDF处理库
+
+# 图像处理增强
+# pillow>=10.0.0         # 图像处理库，增强PDF中的图片支持
+
+# HTTP请求支持
+# requests>=2.31.0       # HTTP客户端库
+
+# 模板引擎
+# jinja2>=3.1.0          # 模板引擎，用于动态HTML生成
+
+# ==================== 系统依赖说明 ====================
+# 
+# 1. LibreOffice (soffice命令)
+#    - macOS: brew install libreoffice
+#    - Ubuntu: sudo apt-get install libreoffice
+#    - Windows: 从官网下载安装包
+#
+# 2. Playwright浏览器
+#    安装Python包后需要下载浏览器：
+#    playwright install chromium
+#
+# 3. WeasyPrint系统依赖 (macOS)
+#    brew install glib gobject-introspection
+#    export DYLD_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_LIBRARY_PATH
+#
+# ==================== 版本兼容性 ====================
+# Python版本要求: >=3.8
+# 推荐Python版本: >=3.12 (项目开发版本)
+#
+# 主要依赖版本说明：
+# - weasyprint 66.0+: 支持最新CSS特性和性能优化
+# - playwright 1.55.0+: 稳定的浏览器API和安全更新
+# - pydantic 2.8.2+: 现代数据验证和类型提示支持

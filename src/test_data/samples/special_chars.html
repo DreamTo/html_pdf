@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Special Characters Test</title>
+<style>
+body { 
+    font-family: "Times New Roman", "SimSun", serif; 
+    margin: 40px; 
+    line-height: 1.8;
+}
+h1 { color: #2c3e50; }
+h2 { color: #34495e; margin-top: 30px; }
+.char-section { 
+    margin: 20px 0; 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.char-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    margin: 15px 0;
+}
+.char-item { 
+    text-align: center; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    background-color: white;
+    font-size: 18px;
+}
+.math-formula { 
+    font-size: 20px; 
+    text-align: center; 
+    margin: 20px 0; 
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-left: 4px solid #3498db;
+}
+.currency-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 15px 0;
+}
+.currency-table th, .currency-table td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center;
+}
+.currency-table th { 
+    background-color: #f2f2f2; 
+}
+.emoji-section { 
+    font-size: 24px; 
+    line-height: 2;
+}
+.code-block { 
+    font-family: "Courier New", monospace; 
+    background-color: #f4f4f4; 
+    padding: 15px; 
+    border-radius: 5px; 
+    margin: 15px 0;
+    overflow-x: auto;
+}
+</style>
+</head>
+<body>
+<h1>特殊字符和符号测试</h1>
+<p>测试各种特殊字符、符号、表情符号在 PDF 转换中的显示效果：</p>
+
+<div class="char-section">
+    <h2>数学符号</h2>
+    <div class="char-grid">
+        <div class="char-item">± 正负号</div>
+        <div class="char-item">× 乘号</div>
+        <div class="char-item">÷ 除号</div>
+        <div class="char-item">≠ 不等于</div>
+        <div class="char-item">≤ 小于等于</div>
+        <div class="char-item">≥ 大于等于</div>
+        <div class="char-item">∞ 无穷大</div>
+        <div class="char-item">∑ 求和</div>
+        <div class="char-item">∏ 连乘</div>
+        <div class="char-item">∫ 积分</div>
+        <div class="char-item">√ 根号</div>
+        <div class="char-item">∆ 三角形</div>
+    </div>
+    
+    <div class="math-formula">
+        <p><strong>数学公式示例：</strong></p>
+        <p>E = mc² &nbsp;&nbsp; a² + b² = c² &nbsp;&nbsp; ∫₀^∞ e^(-x²) dx = √π/2</p>
+        <p>lim(x→∞) (1 + 1/x)^x = e &nbsp;&nbsp; ∑(n=1 to ∞) 1/n² = π²/6</p>
+    </div>
+</div>
+
+<div class="char-section">
+    <h2>货币符号</h2>
+    <table class="currency-table">
+        <thead>
+            <tr>
+                <th>符号</th>
+                <th>货币</th>
+                <th>示例金额</th>
+                <th>Unicode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>¥</td><td>人民币</td><td>¥1,234.56</td><td>U+00A5</td></tr>
+            <tr><td>$</td><td>美元</td><td>$1,234.56</td><td>U+0024</td></tr>
+            <tr><td>€</td><td>欧元</td><td>€1,234.56</td><td>U+20AC</td></tr>
+            <tr><td>£</td><td>英镑</td><td>£1,234.56</td><td>U+00A3</td></tr>
+            <tr><td>₹</td><td>印度卢比</td><td>₹1,234.56</td><td>U+20B9</td></tr>
+            <tr><td>₩</td><td>韩元</td><td>₩1,234</td><td>U+20A9</td></tr>
+            <tr><td>¢</td><td>美分</td><td>99¢</td><td>U+00A2</td></tr>
+            <tr><td>₽</td><td>俄罗斯卢布</td><td>₽1,234.56</td><td>U+20BD</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="char-section">
+    <h2>标点符号和特殊符号</h2>
+    <div class="char-grid">
+        <div class="char-item">" " 中文引号</div>
+        <div class="char-item">' ' 中文单引号</div>
+        <div class="char-item">… 省略号</div>
+        <div class="char-item">— 破折号</div>
+        <div class="char-item">– 短破折号</div>
+        <div class="char-item">• 项目符号</div>
+        <div class="char-item">◆ 菱形</div>
+        <div class="char-item">★ 实心星</div>
+        <div class="char-item">☆ 空心星</div>
+        <div class="char-item">♠ 黑桃</div>
+        <div class="char-item">♥ 红心</div>
+        <div class="char-item">♣ 梅花</div>
+        <div class="char-item">♦ 方块</div>
+        <div class="char-item">© 版权</div>
+        <div class="char-item">® 注册商标</div>
+        <div class="char-item">™ 商标</div>
+    </div>
+</div>
+
+<div class="char-section">
+    <h2>箭头符号</h2>
+    <div class="char-grid">
+        <div class="char-item">← 左箭头</div>
+        <div class="char-item">→ 右箭头</div>
+        <div class="char-item">↑ 上箭头</div>
+        <div class="char-item">↓ 下箭头</div>
+        <div class="char-item">↔ 左右箭头</div>
+        <div class="char-item">↕ 上下箭头</div>
+        <div class="char-item">⇐ 双线左箭头</div>
+        <div class="char-item">⇒ 双线右箭头</div>
+        <div class="char-item">⇔ 双线左右箭头</div>
+        <div class="char-item">↗ 右上箭头</div>
+        <div class="char-item">↘ 右下箭头</div>
+        <div class="char-item">↙ 左下箭头</div>
+        <div class="char-item">↖ 左上箭头</div>
+    </div>
+</div>
+
+<div class="char-section emoji-section">
+    <h2>表情符号 (Emoji)</h2>
+    <p><strong>常用表情：</strong></p>
+    <p>😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚</p>
+    
+    <p><strong>手势符号：</strong></p>
+    <p>👍 👎 👌 ✌️ 🤞 🤟 🤘 🤙 👈 👉 👆 👇 ☝️ ✋ 🤚 🖐️ 🖖 👋 🤏</p>
+    
+    <p><strong>物品符号：</strong></p>
+    <p>📱 💻 ⌨️ 🖥️ 🖨️ 🖱️ 🖲️ 💽 💾 💿 📀 📼 📷 📸 📹 🎥 📞 ☎️ 📟</p>
+    
+    <p><strong>交通工具：</strong></p>
+    <p>🚗 🚕 🚙 🚌 🚎 🏎️ 🚓 🚑 🚒 🚐 🛻 🚚 🚛 🚜 🏍️ 🛵 🚲 🛴 🛹</p>
+</div>
+
+<div class="char-section">
+    <h2>编程相关符号</h2>
+    <div class="code-block">
+        <p><strong>常用编程符号：</strong></p>
+        <p>{ } [ ] ( ) &lt; &gt; / \ | &amp; ^ ~ ` @ # $ % * + - = _ : ; , . ? !</p>
+        
+        <p><strong>代码示例：</strong></p>
+        <p>function calculateSum(a, b) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;return a + b;</p>
+        <p>}</p>
+        
+        <p>const result = calculateSum(10, 20);</p>
+        <p>console.log(`结果是: ${result}`);</p>
+    </div>
+</div>
+
+<div class="char-section">
+    <h2>多语言字符</h2>
+    <p><strong>拉丁字符：</strong> àáâãäåæçèéêëìíîïñòóôõöøùúûüý</p>
+    <p><strong>希腊字母：</strong> αβγδεζηθικλμνξοπρστυφχψω ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ</p>
+    <p><strong>俄语字符：</strong> абвгдеёжзийклмнопрстуфхцчшщъыьэюя</p>
+    <p><strong>阿拉伯数字：</strong> ٠١٢٣٤٥٦٧٨٩</p>
+    <p><strong>日语假名：</strong> あいうえお かきくけこ さしすせそ たちつてと</p>
+    <p><strong>韩语字符：</strong> 안녕하세요 한국어 테스트입니다</p>
+</div>
+
+<div class="char-section">
+    <h2>特殊空格和控制字符</h2>
+    <p><strong>不同宽度的空格：</strong></p>
+    <p>普通空格: A B</p>
+    <p>不换行空格: A&nbsp;B</p>
+    <p>全角空格: A　B</p>
+    <p>细空格: A&thinsp;B</p>
+    <p>零宽空格: A​B</p>
+    
+    <p><strong>制表符和换行：</strong></p>
+    <pre>制表符分隔：	列1	列2	列3
+换行测试：
+第一行
+第二行
+第三行</pre>
+</div>
+
+<h2>测试要点</h2>
+<ul>
+    <li><strong>字符编码：</strong>UTF-8编码的正确处理</li>
+    <li><strong>字体支持：</strong>特殊字符的字体回退机制</li>
+    <li><strong>Unicode支持：</strong>各种Unicode字符的显示</li>
+    <li><strong>表情符号：</strong>彩色Emoji的渲染效果</li>
+    <li><strong>数学符号：</strong>科学和数学符号的准确显示</li>
+    <li><strong>多语言：</strong>不同语言字符的混合显示</li>
+    <li><strong>特殊空格：</strong>各种空格字符的处理</li>
+</ul>
+</body>
+</html>

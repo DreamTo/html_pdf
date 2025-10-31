@@ -1,0 +1,428 @@
+{
+  "results": {
+    "WeasyPrint": [
+      {
+        "sample_name": "base.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/base_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.17468905448913574,
+        "file_size": 154976,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "complex.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/complex_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.08721280097961426,
+        "file_size": 145163,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "chinese.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/chinese_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.0839090347290039,
+        "file_size": 156315,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "dynamic.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/dynamic_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.042601823806762695,
+        "file_size": 72564,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "svg.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/svg_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.16753482818603516,
+        "file_size": 226935,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "print_styles.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/print_styles_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.2389681339263916,
+        "file_size": 69677,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "forms.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/forms_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.24602508544921875,
+        "file_size": 250349,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "long_document.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/long_document_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.27036023139953613,
+        "file_size": 158264,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "special_chars.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/special_chars_weasyprint.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.9195230007171631,
+        "file_size": 6099812,
+        "quality_score": 80,
+        "error_message": "",
+        "notes": ""
+      }
+    ],
+    "Playwright": [
+      {
+        "sample_name": "base.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/base_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.07353711128234863,
+        "file_size": 91200,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "complex.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/complex_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.02688884735107422,
+        "file_size": 76746,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "chinese.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/chinese_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.014995813369750977,
+        "file_size": 76385,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "dynamic.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/dynamic_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 2.037389039993286,
+        "file_size": 26992,
+        "quality_score": 85,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "svg.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/svg_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.039376020431518555,
+        "file_size": 162836,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "print_styles.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/print_styles_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.11078810691833496,
+        "file_size": 145830,
+        "quality_score": 95,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "forms.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/forms_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.05080604553222656,
+        "file_size": 338253,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "long_document.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/long_document_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.10931706428527832,
+        "file_size": 281703,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "special_chars.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/special_chars_playwright.pdf",
+        "conversion_success": true,
+        "conversion_time": 0.6323740482330322,
+        "file_size": 299549,
+        "quality_score": 85,
+        "error_message": "",
+        "notes": ""
+      }
+    ],
+    "LibreOffice": [
+      {
+        "sample_name": "base.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/base_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.5113170146942139,
+        "file_size": 40164,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "complex.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/complex_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.156752109527588,
+        "file_size": 27984,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "chinese.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/chinese_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.1722617149353027,
+        "file_size": 33755,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "dynamic.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/dynamic_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.1266028881072998,
+        "file_size": 11164,
+        "quality_score": 90,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "svg.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/svg_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.1484220027923584,
+        "file_size": 58497,
+        "quality_score": 85,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "print_styles.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/print_styles_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.2009658813476562,
+        "file_size": 127187,
+        "quality_score": 85,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "forms.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/forms_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.241868019104004,
+        "file_size": 103945,
+        "quality_score": 85,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "long_document.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/long_document_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.2585527896881104,
+        "file_size": 331392,
+        "quality_score": 80,
+        "error_message": "",
+        "notes": ""
+      },
+      {
+        "sample_name": "special_chars.html",
+        "file_path": "/Users/jay/Desktop/script/src/test_data/outputs/special_chars_soffice.pdf",
+        "conversion_success": true,
+        "conversion_time": 1.4067280292510986,
+        "file_size": 2482195,
+        "quality_score": 75,
+        "error_message": "",
+        "notes": ""
+      }
+    ]
+  },
+  "metrics": {
+    "WeasyPrint": {
+      "tool_name": "WeasyPrint",
+      "layout_visual_score": 92.22222222222223,
+      "functionality_score": 83.00000000000001,
+      "performance_score": 98.01704533894858,
+      "deployment_score": 70.0,
+      "customization_score": 75,
+      "weighted_score": 87.1311868455675,
+      "conversion_times": [
+        0.17468905448913574,
+        0.08721280097961426,
+        0.0839090347290039,
+        0.042601823806762695,
+        0.16753482818603516,
+        0.2389681339263916,
+        0.24602508544921875,
+        0.27036023139953613,
+        0.9195230007171631
+      ],
+      "file_sizes": {
+        "base.html": 154976,
+        "complex.html": 145163,
+        "chinese.html": 156315,
+        "dynamic.html": 72564,
+        "svg.html": 226935,
+        "print_styles.html": 69677,
+        "forms.html": 250349,
+        "long_document.html": 158264,
+        "special_chars.html": 6099812
+      }
+    },
+    "Playwright": {
+      "tool_name": "Playwright",
+      "layout_visual_score": 91.66666666666667,
+      "functionality_score": 100,
+      "performance_score": 97.24846924675836,
+      "deployment_score": 70.0,
+      "customization_score": 85,
+      "weighted_score": 92.033027182685,
+      "conversion_times": [
+        0.07353711128234863,
+        0.02688884735107422,
+        0.014995813369750977,
+        2.037389039993286,
+        0.039376020431518555,
+        0.11078810691833496,
+        0.05080604553222656,
+        0.10931706428527832,
+        0.6323740482330322
+      ],
+      "file_sizes": {
+        "base.html": 91200,
+        "complex.html": 76746,
+        "chinese.html": 76385,
+        "dynamic.html": 26992,
+        "svg.html": 162836,
+        "print_styles.html": 145830,
+        "forms.html": 338253,
+        "long_document.html": 281703,
+        "special_chars.html": 299549
+      }
+    },
+    "LibreOffice": {
+      "tool_name": "LibreOffice",
+      "layout_visual_score": 85.55555555555556,
+      "functionality_score": 68.44444444444444,
+      "performance_score": 90.02358182271323,
+      "deployment_score": 70.0,
+      "customization_score": 60,
+      "weighted_score": 78.0602719200982,
+      "conversion_times": [
+        1.5113170146942139,
+        1.156752109527588,
+        1.1722617149353027,
+        1.1266028881072998,
+        1.1484220027923584,
+        1.2009658813476562,
+        1.241868019104004,
+        1.2585527896881104,
+        1.4067280292510986
+      ],
+      "file_sizes": {
+        "base.html": 40164,
+        "complex.html": 27984,
+        "chinese.html": 33755,
+        "dynamic.html": 11164,
+        "svg.html": 58497,
+        "print_styles.html": 127187,
+        "forms.html": 103945,
+        "long_document.html": 331392,
+        "special_chars.html": 2482195
+      }
+    }
+  },
+  "objective_metrics": {
+    "WeasyPrint": {
+      "tool_name": "WeasyPrint",
+      "overall_score": 88.33083278637974,
+      "avg_file_size": 795.7958984375,
+      "file_size_consistency": 0,
+      "compression_efficiency": 67.29250290971643,
+      "text_preservation_rate": 92.98888888888888,
+      "content_density_score": 68.61401794366728,
+      "chinese_support_score": 100,
+      "special_char_support": 100,
+      "image_support_rate": 100,
+      "font_preservation_rate": 100,
+      "form_support_rate": 30.0,
+      "page_structure_score": 55.55555555555556,
+      "success_rate": 100.0,
+      "error_rate": 0.0
+    },
+    "Playwright": {
+      "tool_name": "Playwright",
+      "overall_score": 88.8813214575313,
+      "avg_file_size": 162.70551215277777,
+      "file_size_consistency": 0,
+      "compression_efficiency": 64.91379155218067,
+      "text_preservation_rate": 95.88888888888889,
+      "content_density_score": 66.33141613593094,
+      "chinese_support_score": 100,
+      "special_char_support": 100,
+      "image_support_rate": 100,
+      "font_preservation_rate": 100,
+      "form_support_rate": 60.0,
+      "page_structure_score": 66.66666666666667,
+      "success_rate": 100.0,
+      "error_rate": 0.0
+    },
+    "LibreOffice": {
+      "tool_name": "LibreOffice",
+      "overall_score": 88.2810324970813,
+      "avg_file_size": 348.9890407986111,
+      "file_size_consistency": 0,
+      "compression_efficiency": 64.8313025548685,
+      "text_preservation_rate": 92.98888888888888,
+      "content_density_score": 66.25226002739907,
+      "chinese_support_score": 100,
+      "special_char_support": 100,
+      "image_support_rate": 100,
+      "font_preservation_rate": 100,
+      "form_support_rate": 30.0,
+      "page_structure_score": 66.66666666666667,
+      "success_rate": 100.0,
+      "error_rate": 0.0
+    }
+  }
+}
