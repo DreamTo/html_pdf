@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Print Styles Test</title>
+<style>
+/* 通用样式 */
+body { 
+    font-family: "Times New Roman", serif; 
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 { color: #2c3e50; }
+.screen-only { background-color: #f8f9fa; padding: 10px; }
+
+/* 打印专用样式 */
+@media print {
+    body { 
+        margin: 0;
+        font-size: 12pt;
+    }
+    
+    .screen-only { 
+        display: none; 
+    }
+    
+    .print-only { 
+        display: block !important; 
+    }
+    
+    h1 { 
+        color: black;
+        page-break-after: avoid;
+    }
+    
+    .page-break { 
+        page-break-before: always; 
+    }
+    
+    .no-break { 
+        page-break-inside: avoid; 
+    }
+    
+    a[href]:after { 
+        content: " (" attr(href) ")"; 
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* 页面设置 */
+@page {
+    size: A4;
+    margin: 2cm;
+    
+    @top-center {
+        content: "打印样式测试文档";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    @bottom-right {
+        content: "第 " counter(page) " 页";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+@page :first {
+    @top-center { content: none; }
+}
+
+.print-only { display: none; }
+</style>
+</head>
+<body>
+<h1>CSS 打印样式测试</h1>
+
+<div class="screen-only">
+    <p><strong>屏幕显示内容：</strong>这个区域只在屏幕上显示，打印时会被隐藏。</p>
+</div>
+
+<div class="print-only">
+    <p><strong>打印专用内容：</strong>这个区域只在打印时显示。</p>
+</div>
+
+<h2>链接处理测试</h2>
+<p>访问 <a href="https://www.example.com">示例网站</a> 了解更多信息。</p>
+<p>查看 <a href="mailto:test@example.com">联系邮箱</a> 获取支持。</p>
+
+<h2>分页控制测试</h2>
+<div class="no-break">
+    <h3>不可分页的内容块</h3>
+    <p>这个内容块设置了 page-break-inside: avoid，应该保持在同一页上。</p>
+    <ul>
+        <li>项目 1</li>
+        <li>项目 2</li>
+        <li>项目 3</li>
+        <li>项目 4</li>
+        <li>项目 5</li>
+    </ul>
+</div>
+
+<div class="page-break">
+    <h2>第二页内容</h2>
+    <p>这个标题前设置了强制分页，应该出现在新页面上。</p>
+    
+    <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f8f9fa;">
+                <th>序号</th>
+                <th>项目名称</th>
+                <th>描述</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>项目A</td><td>重要项目描述</td><td>进行中</td></tr>
+            <tr><td>2</td><td>项目B</td><td>次要项目描述</td><td>已完成</td></tr>
+            <tr><td>3</td><td>项目C</td><td>新项目描述</td><td>计划中</td></tr>
+            <tr><td>4</td><td>项目D</td><td>紧急项目描述</td><td>暂停</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>字体和排版测试</h2>
+<p style="font-size: 14pt; font-weight: bold;">粗体大字号文本</p>
+<p style="font-size: 10pt; font-style: italic;">斜体小字号文本</p>
+<p style="text-decoration: underline;">下划线文本</p>
+
+<h2>测试要点</h2>
+<ol>
+    <li><strong>@media print 规则：</strong>屏幕和打印样式的差异</li>
+    <li><strong>@page 规则：</strong>页面尺寸、边距、页眉页脚</li>
+    <li><strong>分页控制：</strong>page-break-before/after/inside 属性</li>
+    <li><strong>链接处理：</strong>打印时显示链接地址</li>
+    <li><strong>内容显示控制：</strong>screen-only 和 print-only 内容</li>
+    <li><strong>字体渲染：</strong>不同字号和样式的打印效果</li>
+</ol>
+</body>
+</html>

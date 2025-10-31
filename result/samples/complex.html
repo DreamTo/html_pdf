@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Complex Layout Test</title>
+<style>
+body { font-family: "Segoe UI", sans-serif; margin: 30px; }
+header, footer { text-align: center; color: #888; }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+<header>页眉 - Complex Layout</header>
+<div class="container">
+  <div class="card"><h3>左侧内容</h3><p>测试 Grid 布局和分页效果。</p></div>
+  <div class="card"><h3>右侧内容</h3><p>多列布局是否正确对齐。</p></div>
+</div>
+<div class="page-break"></div>
+<footer>页脚 - Page 2</footer>
+</body>
+</html>

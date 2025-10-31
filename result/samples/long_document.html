@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Long Document Pagination Test</title>
+<style>
+body { 
+    font-family: "Times New Roman", serif; 
+    margin: 0;
+    padding: 40px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+h1 { 
+    color: #2c3e50; 
+    text-align: center;
+    margin-bottom: 30px;
+    page-break-after: avoid;
+}
+
+h2 { 
+    color: #34495e; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    page-break-after: avoid;
+}
+
+h3 { 
+    color: #7f8c8d; 
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p { 
+    text-align: justify; 
+    margin-bottom: 15px;
+}
+
+.chapter { 
+    page-break-before: always; 
+    margin-top: 0;
+}
+
+.no-break { 
+    page-break-inside: avoid; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0;
+    page-break-inside: avoid;
+}
+
+th, td { 
+    border: 1px solid #bdc3c7; 
+    padding: 12px; 
+    text-align: left;
+}
+
+th { 
+    background-color: #ecf0f1; 
+    font-weight: bold;
+}
+
+.page-number {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+@page {
+    size: A4;
+    margin: 2.5cm;
+    
+    @bottom-center {
+        content: "第 " counter(page) " 页 / 共 " counter(pages) " 页";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+.footnote {
+    font-size: 12px;
+    color: #7f8c8d;
+    border-top: 1px solid #bdc3c7;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+</style>
+</head>
+<body>
+<h1>长文档分页测试报告</h1>
+
+<div class="no-break">
+    <h2>摘要</h2>
+    <p>本文档用于测试HTML到PDF转换工具在处理长文档时的分页效果、页眉页脚、章节分页等功能。文档包含多个章节，每个章节都有详细的内容，用于验证不同转换工具的分页算法和排版质量。</p>
+</div>
+
+<h2>目录</h2>
+<ol>
+    <li>第一章：技术概述</li>
+    <li>第二章：实现方案</li>
+    <li>第三章：性能分析</li>
+    <li>第四章：测试结果</li>
+    <li>第五章：结论与建议</li>
+</ol>
+
+<h2 class="chapter">第一章：技术概述</h2>
+
+<h3>1.1 背景介绍</h3>
+<p>随着数字化办公的普及，HTML到PDF的转换需求日益增长。企业需要将网页内容、报表、文档等转换为PDF格式，以便于存档、打印和分享。目前市场上存在多种转换工具，每种工具都有其特点和适用场景。</p>
+
+<p>本研究对比了三种主流的HTML到PDF转换工具：WeasyPrint、Playwright和LibreOffice。这些工具在技术实现、功能特性、性能表现等方面各有优劣，需要根据具体的应用场景选择合适的工具。</p>
+
+<h3>1.2 技术原理</h3>
+<p>HTML到PDF转换的核心是将网页的DOM结构和CSS样式转换为PDF的页面布局。这个过程涉及多个技术环节：</p>
+
+<ul>
+    <li><strong>HTML解析：</strong>解析HTML文档结构，构建DOM树</li>
+    <li><strong>CSS渲染：</strong>应用CSS样式，计算元素的位置和大小</li>
+    <li><strong>布局计算：</strong>根据页面尺寸进行分页和布局</li>
+    <li><strong>PDF生成：</strong>将渲染结果输出为PDF格式</li>
+</ul>
+
+<p>不同的转换工具采用不同的技术路径。WeasyPrint基于Python实现，专注于CSS打印样式的支持；Playwright基于Chromium引擎，提供了接近浏览器的渲染效果；LibreOffice则通过其内置的HTML导入功能实现转换。</p>
+
+<div class="no-break">
+    <h3>1.3 评估维度</h3>
+    <p>为了全面评估这些工具的性能，我们设定了以下评估维度：</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>维度</th>
+                <th>权重</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>布局和视觉保真度</td>
+                <td>30%</td>
+                <td>CSS样式渲染的准确性，布局的一致性</td>
+            </tr>
+            <tr>
+                <td>功能支持</td>
+                <td>25%</td>
+                <td>支持的HTML/CSS特性，JavaScript执行能力</td>
+            </tr>
+            <tr>
+                <td>性能和稳定性</td>
+                <td>20%</td>
+                <td>转换速度，内存使用，错误处理</td>
+            </tr>
+            <tr>
+                <td>部署可行性</td>
+                <td>15%</td>
+                <td>安装难度，依赖管理，跨平台支持</td>
+            </tr>
+            <tr>
+                <td>可定制性</td>
+                <td>10%</td>
+                <td>配置选项，扩展能力，API丰富度</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 class="chapter">第二章：实现方案</h2>
+
+<h3>2.1 WeasyPrint 实现</h3>
+<p>WeasyPrint是一个基于Python的HTML/CSS到PDF转换库，专门为打印设计。它完全支持CSS 2.1和部分CSS 3特性，特别是CSS打印模块（@page规则、分页控制等）。</p>
+
+<p>WeasyPrint的主要优势包括：</p>
+<ul>
+    <li>优秀的CSS打印样式支持</li>
+    <li>精确的分页控制</li>
+    <li>支持页眉页脚</li>
+    <li>良好的中文字体支持</li>
+    <li>纯Python实现，易于集成</li>
+</ul>
+
+<p>然而，WeasyPrint也有一些限制：</p>
+<ul>
+    <li>不支持JavaScript</li>
+    <li>CSS 3支持有限</li>
+    <li>某些现代CSS特性不支持</li>
+    <li>依赖系统字体库</li>
+</ul>
+
+<h3>2.2 Playwright 实现</h3>
+<p>Playwright是微软开发的浏览器自动化工具，基于Chromium、Firefox和WebKit引擎。它可以生成高质量的PDF，因为它使用真实的浏览器引擎进行渲染。</p>
+
+<p>Playwright的主要优势：</p>
+<ul>
+    <li>完整的现代CSS支持</li>
+    <li>JavaScript执行能力</li>
+    <li>接近浏览器的渲染效果</li>
+    <li>支持动态内容</li>
+    <li>跨平台兼容性好</li>
+</ul>
+
+<p>Playwright的限制：</p>
+<ul>
+    <li>资源消耗较大</li>
+    <li>启动时间较长</li>
+    <li>需要下载浏览器引擎</li>
+    <li>打印样式支持有限</li>
+</ul>
+
+<h3>2.3 LibreOffice 实现</h3>
+<p>LibreOffice是一个开源的办公套件，提供了HTML导入和PDF导出功能。通过其Writer组件，可以实现HTML到PDF的转换。</p>
+
+<p>LibreOffice的特点：</p>
+<ul>
+    <li>成熟的文档处理能力</li>
+    <li>丰富的格式支持</li>
+    <li>可靠的PDF生成</li>
+    <li>支持复杂的文档结构</li>
+</ul>
+
+<p>但也存在一些问题：</p>
+<ul>
+    <li>HTML解析能力有限</li>
+    <li>CSS支持不完整</li>
+    <li>转换速度较慢</li>
+    <li>需要图形界面环境</li>
+</ul>
+
+<h2 class="chapter">第三章：性能分析</h2>
+
+<h3>3.1 转换速度对比</h3>
+<p>我们使用相同的测试文档对三种工具进行了性能测试。测试环境为MacBook Pro M1，16GB内存。每个工具运行10次，取平均值。</p>
+
+<div class="no-break">
+    <table>
+        <thead>
+            <tr>
+                <th>工具</th>
+                <th>平均转换时间</th>
+                <th>内存使用峰值</th>
+                <th>CPU使用率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WeasyPrint</td>
+                <td>2.3秒</td>
+                <td>85MB</td>
+                <td>45%</td>
+            </tr>
+            <tr>
+                <td>Playwright</td>
+                <td>4.1秒</td>
+                <td>180MB</td>
+                <td>65%</td>
+            </tr>
+            <tr>
+                <td>LibreOffice</td>
+                <td>8.7秒</td>
+                <td>220MB</td>
+                <td>35%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>3.2 文件大小分析</h3>
+<p>生成的PDF文件大小也是一个重要的考量因素，特别是在需要网络传输或存储大量文档的场景下。</p>
+
+<p>测试结果显示，WeasyPrint生成的PDF文件最小，平均为245KB；Playwright生成的文件稍大，平均为312KB；LibreOffice生成的文件最大，平均为428KB。</p>
+
+<h3>3.3 稳定性测试</h3>
+<p>在连续转换1000个文档的压力测试中，WeasyPrint表现最稳定，成功率达到99.8%；Playwright的成功率为98.5%，主要失败原因是超时；LibreOffice的成功率为96.2%，偶尔会出现进程崩溃。</p>
+
+<h2 class="chapter">第四章：测试结果</h2>
+
+<h3>4.1 布局保真度测试</h3>
+<p>我们设计了包含各种CSS特性的测试页面，包括Flexbox、Grid、浮动、定位等布局方式。测试结果表明：</p>
+
+<ul>
+    <li><strong>Playwright：</strong>在现代CSS特性支持方面表现最佳，Flexbox和Grid布局完全正确</li>
+    <li><strong>WeasyPrint：</strong>传统CSS特性支持良好，但对CSS Grid支持有限</li>
+    <li><strong>LibreOffice：</strong>基础布局正确，但复杂CSS特性支持较差</li>
+</ul>
+
+<h3>4.2 字体渲染测试</h3>
+<p>字体渲染是影响PDF质量的重要因素。测试包括中文字体、英文字体、特殊符号等：</p>
+
+<ul>
+    <li><strong>中文字体：</strong>三种工具都能正确显示中文，WeasyPrint的字体嵌入最完整</li>
+    <li><strong>Web字体：</strong>Playwright支持Web字体加载，其他工具需要本地字体</li>
+    <li><strong>特殊符号：</strong>Playwright和WeasyPrint都能正确显示数学符号和特殊字符</li>
+</ul>
+
+<h3>4.3 图像处理测试</h3>
+<p>图像处理能力直接影响文档的视觉效果：</p>
+
+<ul>
+    <li><strong>位图图像：</strong>所有工具都能正确处理PNG、JPEG格式</li>
+    <li><strong>SVG图像：</strong>Playwright和WeasyPrint支持SVG，LibreOffice支持有限</li>
+    <li><strong>背景图像：</strong>Playwright处理最佳，WeasyPrint次之</li>
+</ul>
+
+<h2 class="chapter">第五章：结论与建议</h2>
+
+<h3>5.1 综合评估结果</h3>
+<p>基于我们的测试和分析，三种工具的综合评分如下：</p>
+
+<ol>
+    <li><strong>Playwright（89.5分）：</strong>现代CSS支持最佳，适合复杂页面转换</li>
+    <li><strong>WeasyPrint（79.2分）：</strong>打印样式支持优秀，适合报告生成</li>
+    <li><strong>LibreOffice（64.5分）：</strong>文档处理成熟，适合简单HTML转换</li>
+</ol>
+
+<h3>5.2 使用建议</h3>
+<p>根据不同的应用场景，我们提供以下建议：</p>
+
+<div class="no-break">
+    <h4>选择Playwright的场景：</h4>
+    <ul>
+        <li>需要支持现代CSS特性（Flexbox、Grid等）</li>
+        <li>页面包含JavaScript动态内容</li>
+        <li>对视觉保真度要求很高</li>
+        <li>需要处理复杂的Web应用页面</li>
+    </ul>
+</div>
+
+<div class="no-break">
+    <h4>选择WeasyPrint的场景：</h4>
+    <ul>
+        <li>需要精确的分页控制</li>
+        <li>大量使用CSS打印样式</li>
+        <li>对性能和资源消耗敏感</li>
+        <li>需要生成正式的报告文档</li>
+    </ul>
+</div>
+
+<div class="no-break">
+    <h4>选择LibreOffice的场景：</h4>
+    <ul>
+        <li>HTML结构相对简单</li>
+        <li>需要与其他Office文档集成</li>
+        <li>对转换速度要求不高</li>
+        <li>已有LibreOffice部署环境</li>
+    </ul>
+</div>
+
+<h3>5.3 未来发展方向</h3>
+<p>HTML到PDF转换技术仍在不断发展，未来的趋势包括：</p>
+
+<ul>
+    <li><strong>更好的CSS支持：</strong>特别是CSS Grid、Flexbox等现代特性</li>
+    <li><strong>性能优化：</strong>减少内存使用，提高转换速度</li>
+    <li><strong>云端服务：</strong>提供API服务，简化部署和维护</li>
+    <li><strong>AI辅助：</strong>智能优化布局，提高转换质量</li>
+</ul>
+
+<div class="footnote">
+    <p><strong>注：</strong>本测试报告基于2024年1月的工具版本，具体结果可能因版本更新而有所变化。建议在实际使用前进行针对性测试。</p>
+</div>
+
+</body>
+</html>

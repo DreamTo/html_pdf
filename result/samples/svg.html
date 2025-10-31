@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SVG Graphics Test</title>
+<style>
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 40px; 
+    line-height: 1.6;
+}
+h1 { color: #2c3e50; }
+.svg-container { 
+    margin: 20px 0; 
+    text-align: center;
+}
+svg { 
+    border: 1px solid #ddd; 
+    margin: 10px;
+}
+</style>
+</head>
+<body>
+<h1>SVG 矢量图形测试</h1>
+<p>测试各种 SVG 图形在 PDF 转换中的渲染效果：</p>
+
+<div class="svg-container">
+    <h3>基础图形</h3>
+    <svg width="200" height="100">
+        <rect x="10" y="10" width="80" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+        <circle cx="140" cy="40" r="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+        <text x="100" y="85" font-family="Arial" font-size="14" text-anchor="middle" fill="#2c3e50">基础图形</text>
+    </svg>
+</div>
+
+<div class="svg-container">
+    <h3>路径和曲线</h3>
+    <svg width="200" height="100">
+        <path d="M 10 50 Q 50 10 100 50 T 190 50" stroke="#9b59b6" stroke-width="3" fill="none"/>
+        <path d="M 20 70 L 60 30 L 100 70 L 140 30 L 180 70" stroke="#f39c12" stroke-width="2" fill="none"/>
+        <text x="100" y="90" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">曲线路径</text>
+    </svg>
+</div>
+
+<div class="svg-container">
+    <h3>渐变效果</h3>
+    <svg width="200" height="100">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#ff7675;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#fd79a8;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <rect x="20" y="20" width="160" height="60" fill="url(#grad1)" rx="10"/>
+        <text x="100" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">渐变填充</text>
+    </svg>
+</div>
+
+<div class="svg-container">
+    <h3>图标和符号</h3>
+    <svg width="200" height="100">
+        <!-- 心形 -->
+        <path d="M50,30 C50,25 45,20 40,20 C35,20 30,25 30,30 C30,35 40,50 50,60 C60,50 70,35 70,30 C70,25 65,20 60,20 C55,20 50,25 50,30 Z" fill="#e74c3c"/>
+        <!-- 星形 -->
+        <polygon points="150,15 155,25 165,25 157,32 160,42 150,37 140,42 143,32 135,25 145,25" fill="#f1c40f"/>
+        <text x="100" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">图标符号</text>
+    </svg>
+</div>
+
+<p><strong>测试要点：</strong></p>
+<ul>
+    <li>矢量图形的清晰度和缩放效果</li>
+    <li>颜色填充和描边的准确性</li>
+    <li>渐变效果的支持程度</li>
+    <li>复杂路径和曲线的渲染</li>
+    <li>文本在SVG中的显示效果</li>
+</ul>
+</body>
+</html>
